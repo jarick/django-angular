@@ -1,0 +1,32 @@
+<div class="column row">
+    <a href="/#!/" class="small button secondary">Show projects</a>
+    <a ng-href="/#!/projects/{$ project $}/tasks" class="small button secondary">
+        Show project task
+    </a>
+    <a ng-href="/#!/projects/{$ project $}/create" class="small button">
+        Create
+    </a>
+</div>
+<div class="row">
+    <div class="columns">
+        <form id="project-form" enctype="multipart/form-data" ng-submit="submit()">
+            <input ng-value="project" name="project" type="hidden" />
+            <label>Name
+                <input ng-model="elem.name" name="name" type="text"
+                       placeholder="Name" required="required">
+            </label>
+            <label>Description
+                <textarea ng-model="elem.description" name="description" placeholder="Description"
+                          required="required"></textarea>
+            </label>
+            <label>Status
+                <select name="status" placeholder="Status">
+                    <option value="0" ng-selected="elem.status != 1">INCOMPLETE</option>
+                    <option value="1" ng-selected="elem.status == 1">COMPLETE</option>
+                </select>
+            </label>
+            <input value="2016-12-31 00:00:00" name="end" type="hidden" />
+            <input type="submit" class="button expanded" value="Submit">
+        </form>
+    </div>
+</div>

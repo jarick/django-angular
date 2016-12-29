@@ -1,0 +1,11 @@
+*.pyc
+staticfiles
+local_settings.py
+*.sqlite3
+/project/media/
+/webpack-stats.json
+/db.sqlite3
+.DS_Store
+node_modules/
+npm-debug.log
+/.env

@@ -1,0 +1,39 @@
+<div class="column row">
+    <a href="/#!/" class="small button secondary">Show projects</a>
+    <a ng-href="/#!/projects/{$ project $}/tasks" class="small button secondary">
+        Show project task
+    </a>
+    <a ng-href="/#!/projects/{$ project $}/create" class="small button">
+        Create
+    </a>
+</div>
+<div class="row small-up-2 medium-up-3 large-up-4">
+    <div ng-repeat="item in list" class="column">
+        <img class="thumbnail" src="http://placehold.it/550x550">
+        <h5>
+            {$ item.name $}
+            | <a href="/#!/projects/{$ project $}/edit/{$ item.pk $}">Edit</a>
+            | <a ng-click="del(item.pk)">Delete</a>
+        </h5>
+    </div>
+</div>
+<div class="column row">
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+        <li ng-if="!previous" class="disabled">
+            « <span class="show-for-sr">Previous page</span>
+        </li>
+        <li ng-if="previous">
+            <a ng-href="/#!/projects/{$ project $}/tasks/page/{$ previous $}" aria-label="Previous page">
+                « <span class="show-for-sr">Previous page</span>
+            </a>
+        </li>
+        <li ng-if="!next" class="disabled">
+           » <span class="show-for-sr">Next page</span>
+        </li>
+        <li ng-if="next">
+            <a ng-href="/#!/projects/{$ project $}/tasks/page/{$ next $}" aria-label="Next page">
+                » <span class="show-for-sr">Next page</span>
+            </a>
+        </li>
+    </ul>
+</div>

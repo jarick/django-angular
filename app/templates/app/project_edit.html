@@ -1,0 +1,29 @@
+<div class="column row">
+    <a href="/#!/" class="small button secondary">Show projects</a>
+    <a href="/#!/create" class="small button">Create</a>
+</div>
+<div class="row">
+    <div class="columns">
+        <form id="project-form" enctype="multipart/form-data" ng-submit="submit()">
+            <label>Name
+                <input ng-model="elem.name" name="name" type="text"
+                       placeholder="Name" required="required">
+            </label>
+            <label>Description
+                <textarea ng-model="elem.description" name="description" placeholder="Description"
+                          required="required"></textarea>
+            </label>
+            <label>
+                Duration
+                <input name="duration" type="text" ng-model="elem.duration"
+                       placeholder="Duration" required="required">
+            </label>
+            <label>
+                Avatar
+                <input name="avatar" type="file" placeholder="Avatar"
+                       required="required">
+            </label>
+            <input type="submit" class="button expanded" value="Submit">
+        </form>
+    </div>
+</div>
