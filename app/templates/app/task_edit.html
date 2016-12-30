@@ -25,7 +25,14 @@
                     <option value="1" ng-selected="elem.status == 1">COMPLETE</option>
                 </select>
             </label>
-            <input value="2016-12-31 00:00:00" name="end" type="hidden" />
+            <label>Start
+                <input ng-model="elem.start" name="start" type="datetime-local"
+                       placeholder="Start" required="required">
+            </label>
+            <label>End
+                <input ng-model="elem.end" name="end" type="datetime-local"
+                       placeholder="End" required="required">
+            </label>
             <input type="submit" class="button expanded" value="Submit">
         </form>
     </div>

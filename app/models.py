@@ -27,7 +27,7 @@ class Task(models.Model):
     name = models.CharField('Name', max_length=255)
     date = models.DateTimeField('Date', auto_now_add=True)
     description = models.TextField('Description')
-    start = models.DateTimeField('Start', auto_now_add=True)
+    start = models.DateTimeField('Start')
     end = models.DateTimeField('End')
     status = models.PositiveSmallIntegerField('Status', choices=STATUS, default=INCOMPLETE)
     project = models.ForeignKey(Project, verbose_name='Project')
